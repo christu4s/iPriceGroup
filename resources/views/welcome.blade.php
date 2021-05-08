@@ -21,14 +21,29 @@
             h1 {
                 color: red;
             }
-            
+            input[type="text" i] {
+                    padding: 1px 2px;
+                    border: 2px solid black;
+                }
         </style>
     </head>
     <body class="antialiased">
     <h1>iPrice group</h1>
+    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0" >
+                <form method="GET" action="/">
+                <label for="title"><b>Type new String  (optional)</b></label>
+                <input id="new_string" name="new_stirng" type="text" class="@error('new_string') is-invalid @enderror">
+                <button type="submit">
+                    Submit
+                </button>
+                <a href = "/" style = 'color:green'><b>click me to refresh </b>(default input 'hello world')</a>
+                </form>
+                </div>
+            </div>
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
             
-
+           <h3>Output:</h3>
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                 <b>{{$stringToUppercase}}</b>

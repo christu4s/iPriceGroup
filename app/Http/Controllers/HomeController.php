@@ -33,8 +33,8 @@ class HomeController extends Controller
  
     public function index()
     {
-
-        $defaultString = 'hello world';
+        
+        $defaultString = isset($_GET['new_stirng']) && !empty($_GET['new_stirng']) ? strtolower($_GET['new_stirng']) : 'hello world';
         $stringToUppercase = $this->stringToUpberCaseHub($defaultString);
         $stringToAlternateUperCase = $this->stringAlternateUperCase($defaultString);
         $stringToCsv = $this->updateStringToCsvFile($defaultString);
