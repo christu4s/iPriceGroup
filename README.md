@@ -13,3 +13,8 @@ php artisan serve
 4. The exported string is updated as a csv file in the given path
 
 ipricegroup/public/exportString.csv
+
+
+5. For unit testing, use the following command on the composer
+
+./vendor/bin/phpunit
